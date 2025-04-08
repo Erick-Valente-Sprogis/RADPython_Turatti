@@ -16,13 +16,15 @@ while True:
     if opcao == 1:
         txt = input( "Digite o nome do arquivo que deseja criar: ")
         with open(txt, 'a') as arquivo:
+            arquivo.write('')
             continue
 
 
     elif opcao == 2:
         print("Escrever no Arquivo.")
         with open(txt, 'a') as arquivo:
-            arquivo.write(input("Novo conteúdo: "))
+            linha= input("Novo conteúdo: ")
+            arquivo.write('\n'+linha)
             continue
 
     elif opcao == 3:
